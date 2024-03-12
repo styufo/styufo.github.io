@@ -82,7 +82,7 @@ author:
   bio              : #"Prof. Luigi Vanfretti's research group and lab. working on cyber-physical power system modeling and simulation, stability and control."
   location         : "Nanjing, CN"
   employer         : "Southeast University"
-  googlescholar    : #"https://scholar.google.com/citations?user=_XI6Q6UAAAAJ&hl=en&oi=ao"
+  googlescholar    : "https://scholar.google.co.jp/citations?hl=zh-CN&user=rEeoJtQAAAAJ"
   email            : "220215382@seu.edu.cn"
   uri              :
   bitbucket        :
@@ -109,7 +109,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : "lvanfretti"
+  youtube          : #"lvanfretti"
   wikipedia        :
 
 
