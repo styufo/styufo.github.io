@@ -23,7 +23,7 @@ Publications
   {% endfor %}</ul>
   
   
-Intership Excerience
+Internship Excerience
 ======
 * Nanjing Research Institute, Huawei Technologies Co., Ltd.
 * Algorithm Engineer 2023.6-2023.9
