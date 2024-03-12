@@ -11,7 +11,7 @@ I am a third-year M.Sc. student at the [Department of Cyber Science and Technolo
 
 I received my B.Sc. degree from the Department of Communication Engineering of [Nanjing University of Posts and Telecommunications](https://www.njupt.edu.cn/). In September 2021, I was admitted to study for a M.Sc. degree at Southeast University without an entrance examination.
 
-You can find my CV here: [Tianyi Song's Curriculum Vitae](master/tlbwsty.github.io/assets/Curriculum_Vitae.pdf).
+You can find my CV here: [Tianyi Song's Curriculum Vitae](/assets/Curriculum_Vitae.pdf).
 
 
 [Email](mailto:220215382@seu.edu.cn) 
