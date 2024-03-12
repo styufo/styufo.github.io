@@ -21,7 +21,7 @@ repository               : "styufo/tlbwsty.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "sty.png"
+  avatar           : "profile.png"
   name             : "Tianyi Song"
   pronouns         : # example: "she/her"  
   bio              : "Southeast University"
