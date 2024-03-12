@@ -16,7 +16,6 @@ You can find my CV here: [Tianyi Song's Curriculum Vitae](../assets/Curriculum_V
 
 [Email](mailto:220215382@seu.edu.cn) 
 
-[personal photo](../images/sty.png)
 
 
 
