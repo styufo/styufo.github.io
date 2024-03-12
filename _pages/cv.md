@@ -25,7 +25,7 @@ Publications
   
 Internship Excerience
 ======
-* Nanjing Research Institute, Huawei Technologies Co., Ltd.
-* Algorithm Engineer 2023.6-2023.9
+Nanjing Research Institute, Huawei Technologies Co., Ltd.  2023.6-2023.9
+* Algorithm Engineer 
 * Duties includes: Participated in the IPCA project’s white-box testing initiative, where I built the project using CMake and utilised the gtest/mockcpp framework for conducting white-box tests
 
