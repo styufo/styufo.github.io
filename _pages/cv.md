@@ -11,13 +11,55 @@ redirect_from:
 
 Education
 ======
-* M.S. in Computer Science, Southeast University, 2021.9 - 2024.7(expected)
-* B.S. in Communication Engineer, Nanjing University of Posts and Telecommunications, 2017.9 - 2021.6
+* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* M.S. in Jekyll, GitHub University, 2014
+* B.S. in GitHub, GitHub University, 2012
 
+Work experience
+======
+* Spring 2024: Academic Pages Collaborator
+  * Github University
+  * Duties includes: Updates and improvements to template
+  * Supervisor: The Users
+
+* Fall 2015: Research Assistant
+  * Github University
+  * Duties included: Merging pull requests
+  * Supervisor: Professor Hub
+
+* Summer 2015: Research Assistant
+  * Github University
+  * Duties included: Tagging issues
+  * Supervisor: Professor Git
+  
+Skills
+======
+* Skill 1
+* Skill 2
+  * Sub-skill 2.1
+  * Sub-skill 2.2
+  * Sub-skill 2.3
+* Skill 3
 
 Publications
 ======
-  <ul>{%Causal-Story: Local Causal Attention Utilising Parameter-Efficient Tuning for Visual Story Synthesis%}
+  <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
-  {% Accepted for publication at 2024 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2024) %}</ul>
+  {% endfor %}</ul>
+  
+Talks
+======
+  <ul>{% for post in site.talks reversed %}
+    {% include archive-single-talk-cv.html  %}
+  {% endfor %}</ul>
+  
+Teaching
+======
+  <ul>{% for post in site.teaching reversed %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+  
+Service and leadership
+======
+* Currently signed in to 43 different slack teams
 
