@@ -12,7 +12,7 @@ title                    : #"Your Name / Site Title"
 title_separator          : "-"
 name                     : &name "Tianyi Song"
 description              : &description "a third-year M.Sc student from Southeast University"
-url                      : "https://tlbwsty.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://tlbwsty.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "https://tlbwsty.github.io" # the subpath of your site, e.g. "/blog"
 repository               : "styufo/tlbwsty.github.io"
 
@@ -92,7 +92,7 @@ comments:
     colorscheme          : # "light" (default), "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
+  branch                 : "master" # "master", "gh-pages"
   commitMessage          : "New comment."
   filename               : comment-{@timestamp}
   format                 : "yml"
