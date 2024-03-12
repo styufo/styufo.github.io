@@ -12,7 +12,7 @@ title                    : #"Your Name / Site Title"
 title_separator          : "-"
 name                     : &name "Tianyi Song"
 description              : &description "a third-year M.Sc student from Southeast University"
-url                      : https://tlbwsty.github.io# the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://tlbwsty.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "styufo/tlbwsty.github.io"
 
@@ -21,7 +21,7 @@ repository               : "styufo/tlbwsty.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "stysty.png"
   name             : "Tianyi Song"
   pronouns         : # example: "she/her"  
   bio              : "Southeast University"
