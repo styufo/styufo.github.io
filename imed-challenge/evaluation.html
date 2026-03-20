@@ -93,14 +93,16 @@
               </table>
             </div>
 
-            <h2>Statistical analysis</h2>
-            <p>
-              The working draft proposes hierarchical bootstrap confidence intervals with 1000 iterations, resampling test sequences and then frames within sequences. This is intended to reflect the nested structure of the evaluation data and to report both score and rank variability.
-            </p>
-
-            <div class="callout">
-              <strong>Practical note.</strong>
-              For methods that require scene-specific training at evaluation time, the proposal states that runtime limits will be enforced for practicality. Those exact caps should be written explicitly once the challenge infrastructure is finalized.
+            <h2>Data usage policy</h2>
+            <div class="faq-list">
+              <div class="faq-item">
+                <h3>External data</h3>
+                <p>Publicly available external datasets and pretrained models are allowed, provided their use is documented clearly in the submitted method description.</p>
+              </div>
+              <div class="faq-item">
+                <h3>Private data</h3>
+                <p>Private clinical data and other non-public institutional datasets are not allowed for training, tuning, or evaluation.</p>
+              </div>
             </div>
 
             <h2>Validation and hidden test philosophy</h2>
