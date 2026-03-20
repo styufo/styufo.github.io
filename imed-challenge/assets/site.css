@@ -311,6 +311,20 @@ code {
   height: auto;
 }
 
+.data-figure {
+  margin: 1.35rem 0 1.6rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: linear-gradient(180deg, #fbfdff 0%, #f2f7fb 100%);
+}
+
+.data-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
 .hero-title {
   margin: 0 0 1.2rem;
   max-width: none;

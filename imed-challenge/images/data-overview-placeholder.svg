@@ -1,0 +1,21 @@
+<svg width="1100" height="520" viewBox="0 0 1100 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1100" height="520" rx="32" fill="#EEF4FA"/>
+  <rect x="28" y="28" width="1044" height="464" rx="26" fill="#F9FBFE" stroke="#C8D7E6" stroke-width="2"/>
+  <rect x="70" y="82" width="960" height="118" rx="24" fill="#E3EDF7"/>
+  <rect x="110" y="116" width="280" height="18" rx="9" fill="#7E9BBA"/>
+  <rect x="110" y="148" width="210" height="14" rx="7" fill="#9CB4CC"/>
+  <rect x="70" y="236" width="300" height="170" rx="24" fill="#DCE8F4"/>
+  <rect x="400" y="236" width="300" height="170" rx="24" fill="#DCE8F4"/>
+  <rect x="730" y="236" width="300" height="170" rx="24" fill="#DCE8F4"/>
+  <rect x="100" y="264" width="170" height="16" rx="8" fill="#8CAAC7"/>
+  <rect x="430" y="264" width="170" height="16" rx="8" fill="#8CAAC7"/>
+  <rect x="760" y="264" width="170" height="16" rx="8" fill="#8CAAC7"/>
+  <rect x="100" y="296" width="210" height="70" rx="16" fill="#F7FAFD" stroke="#C8D7E6"/>
+  <rect x="430" y="296" width="210" height="70" rx="16" fill="#F7FAFD" stroke="#C8D7E6"/>
+  <rect x="760" y="296" width="210" height="70" rx="16" fill="#F7FAFD" stroke="#C8D7E6"/>
+  <circle cx="550" cy="170" r="26" fill="#1F4F7F"/>
+  <path d="M538 170H562" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <path d="M550 158V182" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <text x="550" y="450" text-anchor="middle" fill="#153552" font-family="Arial, sans-serif" font-size="44" font-weight="700">PLACE HOLDER</text>
+  <text x="550" y="486" text-anchor="middle" fill="#6F86A0" font-family="Arial, sans-serif" font-size="24">iMED Challenge dataset overview figure to be replaced</text>
+</svg>
