@@ -315,8 +315,16 @@ code {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.95fr);
   gap: 1.6rem;
-  align-items: center;
+  align-items: start;
   margin-bottom: 1.2rem;
+}
+
+.hero__heading {
+  grid-column: 1 / -1;
+}
+
+.hero__heading h1 {
+  margin-bottom: 0.15rem;
 }
 
 .hero p.lead {
