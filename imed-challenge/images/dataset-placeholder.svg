@@ -15,6 +15,6 @@
   <circle cx="360" cy="168" r="26" fill="#1F4F7F"/>
   <path d="M348 168H372" stroke="white" stroke-width="6" stroke-linecap="round"/>
   <path d="M360 156V180" stroke="white" stroke-width="6" stroke-linecap="round"/>
-  <text x="360" y="450" text-anchor="middle" fill="#153552" font-family="Arial, sans-serif" font-size="38" font-weight="700">PLACEHOLDER</text>
-  <text x="360" y="482" text-anchor="middle" fill="#6F86A0" font-family="Arial, sans-serif" font-size="22">Dataset preview figure to be replaced</text>
+  <text x="360" y="450" text-anchor="middle" fill="#153552" font-family="Arial, sans-serif" font-size="38" font-weight="700">PLACE HOLDER</text>
+  <text x="360" y="482" text-anchor="middle" fill="#6F86A0" font-family="Arial, sans-serif" font-size="22">iMED Challenge introduction figure to be replaced</text>
 </svg>
