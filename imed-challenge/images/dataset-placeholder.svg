@@ -1,0 +1,20 @@
+<svg width="720" height="520" viewBox="0 0 720 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="520" rx="32" fill="#EEF4FA"/>
+  <rect x="28" y="28" width="664" height="464" rx="26" fill="#F9FBFE" stroke="#C8D7E6" stroke-width="2"/>
+  <rect x="72" y="84" width="576" height="112" rx="22" fill="#E3EDF7"/>
+  <rect x="96" y="114" width="222" height="18" rx="9" fill="#7E9BBA"/>
+  <rect x="96" y="146" width="170" height="14" rx="7" fill="#9CB4CC"/>
+  <rect x="72" y="226" width="270" height="190" rx="24" fill="#DCE8F4"/>
+  <rect x="378" y="226" width="270" height="190" rx="24" fill="#DCE8F4"/>
+  <rect x="102" y="254" width="210" height="18" rx="9" fill="#8CAAC7"/>
+  <rect x="408" y="254" width="210" height="18" rx="9" fill="#8CAAC7"/>
+  <rect x="102" y="290" width="180" height="12" rx="6" fill="#B0C4D8"/>
+  <rect x="408" y="290" width="180" height="12" rx="6" fill="#B0C4D8"/>
+  <rect x="102" y="322" width="186" height="64" rx="16" fill="#F7FAFD" stroke="#C8D7E6"/>
+  <rect x="408" y="322" width="186" height="64" rx="16" fill="#F7FAFD" stroke="#C8D7E6"/>
+  <circle cx="360" cy="168" r="26" fill="#1F4F7F"/>
+  <path d="M348 168H372" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <path d="M360 156V180" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <text x="360" y="450" text-anchor="middle" fill="#153552" font-family="Arial, sans-serif" font-size="38" font-weight="700">PLACEHOLDER</text>
+  <text x="360" y="482" text-anchor="middle" fill="#6F86A0" font-family="Arial, sans-serif" font-size="22">Dataset preview figure to be replaced</text>
+</svg>
