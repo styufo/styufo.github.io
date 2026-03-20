@@ -311,6 +311,11 @@ code {
   height: auto;
 }
 
+.hero-title {
+  margin: 0 0 1.2rem;
+  max-width: none;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.95fr);
@@ -319,12 +324,8 @@ code {
   margin-bottom: 1.2rem;
 }
 
-.hero__heading {
-  grid-column: 1 / -1;
-}
-
-.hero__heading h1 {
-  margin-bottom: 0.15rem;
+.hero__copy {
+  min-width: 0;
 }
 
 .hero p.lead {
