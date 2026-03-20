@@ -51,43 +51,6 @@
               The iMED Challenge uses task-specific subsets of the broader iMED dataset. The current proposal emphasizes difficult but realistic settings: deforming tissue, overlapping endoscope views, tool interaction, and clinically relevant variation across scenes.
             </p>
 
-            <h2>What participants receive</h2>
-            <div class="panel-grid">
-              <article>
-                <h3>Image data</h3>
-                <p>
-                  Synchronized multi-view endoscopic video acquired from two stereo endoscopes, resulting in four temporally aligned streams per sequence.
-                </p>
-              </article>
-              <article>
-                <h3>Calibration and metadata</h3>
-                <p>
-                  Camera intrinsics, relative geometry, acquisition category, session / scene / sequence identifiers, tool metadata, and motion-type information.
-                </p>
-              </article>
-              <article>
-                <h3>Task-linked labels</h3>
-                <p>
-                  Relative camera pose trajectories for pose estimation cases, plus pseudo-labeled anatomy and tool segmentations where relevant to the dataset release.
-                </p>
-              </article>
-              <article>
-                <h3>Support code</h3>
-                <p>
-                  The proposal states that official loaders, evaluation scripts, Docker templates, and baseline implementations will be released alongside the challenge.
-                </p>
-              </article>
-            </div>
-
-            <h2>Acquisition setup</h2>
-            <p>
-              Data were collected with dual stereo endoscopy, using two synchronized stereo endoscopes with overlapping fields of view. Endoscope 1 is described in the proposal as a stationary viewpoint, while Endoscope 2 is robot-mounted and actively moved in the pose-estimation setting. Synchronization accuracy is reported at approximately 3 ms.
-            </p>
-
-            <div class="note">
-              The current draft cites data collection with a da Vinci 5 robot and da Vinci 5 stereo endoscopes at Intuitive Surgical facilities, spanning ex vivo organ scenes, cadaver acquisitions, and one live porcine model.
-            </div>
-
             <h2>Task-specific splits</h2>
             <div class="table-wrap">
               <table>
@@ -117,21 +80,6 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
-
-            <div class="split-grid">
-              <div class="split-card">
-                <strong>Scene-level isolation</strong>
-                All sequences from a given anatomical scene remain within a single split.
-              </div>
-              <div class="split-card">
-                <strong>In-distribution tools</strong>
-                Hidden test scenes contain tool types seen during training, reducing confounds from unseen instruments.
-              </div>
-              <div class="split-card">
-                <strong>Unseen anatomy</strong>
-                The intended challenge is generalization to new anatomical scenes rather than new hardware conditions.
-              </div>
             </div>
 
             <h2>Subtask definitions</h2>
