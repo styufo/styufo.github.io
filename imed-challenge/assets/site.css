@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600;700&display=swap");
 
 :root {
-  --bg: #f4f6f8;
+  --bg: #ffffff;
   --surface: #ffffff;
   --surface-soft: #eef3f8;
   --border: #d8e0e7;
@@ -327,7 +327,8 @@ code {
 }
 
 .hero__heading h1 {
-  max-width: 24ch;
+  max-width: none;
+  width: 100%;
 }
 
 .hero__copy {
