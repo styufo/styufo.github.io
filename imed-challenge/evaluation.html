@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation &amp; Prizes - iMED Challenge 2026</title>
+    <meta name="description" content="Evaluation protocol, ranking, and prizes for the iMED Challenge 2026.">
+    <link rel="stylesheet" href="assets/site.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="masthead">
+        <div class="masthead__inner">
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__brand" href="./index.html">iMED Challenge 2026</a>
+            <button class="site-nav__toggle" type="button" data-nav-toggle aria-label="Toggle navigation">Menu</button>
+            <ul class="site-nav__links" data-nav-links>
+              <li><a href="./index.html">Overview</a></li>
+              <li><a href="./data.html">Data</a></li>
+              <li><a class="is-current" href="./evaluation.html">Evaluation &amp; Prizes</a></li>
+              <li><a href="./participation.html">Participation</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="page-wrap">
+        <aside class="sidebar">
+          <div class="sidebar__sticky">
+            <section class="profile-card">
+              <div class="profile-card__avatar">
+                <img src="images/imed-mark.svg" alt="iMED Challenge logo">
+              </div>
+              <h2 class="profile-card__title">Evaluation</h2>
+              <p class="profile-card__subtitle">Transparent metrics and hidden-scene testing</p>
+              <a class="profile-card__button" href="./participation.html">Submission Rules</a>
+              <ul class="profile-card__meta">
+                <li><span class="profile-card__dot"></span><span><strong>Task 1 ranking</strong><br>Lowest mean ATE across hidden test sequences</span></li>
+                <li><span class="profile-card__dot"></span><span><strong>Task 2 ranking</strong><br>Highest mean PSNR across hidden test sequences</span></li>
+                <li><span class="profile-card__dot"></span><span><strong>Reported extras</strong><br>ROT, RTF, SSIM, training speed, rendering speed</span></li>
+              </ul>
+            </section>
+          </div>
+        </aside>
+
+        <section class="content">
+          <article class="content-card">
+            <div class="eyebrow">Assessment Methods</div>
+            <h1>Evaluation focused on generalization, not leaderboard gaming</h1>
+            <p class="kicker">
+              The current iMED proposal uses conventional but clinically meaningful metrics: geometric accuracy for pose estimation and photometric fidelity for deformable novel view synthesis, all computed on hidden test scenes.
+            </p>
+
+            <h2>Primary ranking metrics</h2>
+            <div class="metric-grid">
+              <article class="metric-card">
+                <h3>iMED PE</h3>
+                <p><strong>Primary ranking metric:</strong> Absolute Trajectory Error (ATE)</p>
+                <p><strong>Also reported:</strong> relative rotational error (ROT), registered tracking fraction (RTF), runtime transparency</p>
+              </article>
+              <article class="metric-card">
+                <h3>iMED NVS</h3>
+                <p><strong>Primary ranking metric:</strong> PSNR</p>
+                <p><strong>Also reported:</strong> SSIM, training FPS, rendering FPS</p>
+              </article>
+            </div>
+
+            <h2>Why these metrics</h2>
+            <p>
+              The proposal argues that pose accuracy should be judged through translation and rotational consistency, because downstream reconstruction and navigation depend on reliable geometry. For the novel-view task, PSNR and SSIM remain practical summary measures for render quality, while speed is reported to reflect deployment realism without overwhelming reconstruction quality in the ranking itself.
+            </p>
+
+            <h2>Ranking procedure</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Task</th>
+                    <th>Per-sequence computation</th>
+                    <th>Aggregate rank</th>
+                    <th>Fallback for missing outputs</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>iMED PE</td>
+                    <td>ATE, ROT, and valid-frame fraction computed sequence-by-sequence</td>
+                    <td>Mean ATE over all hidden test sequences</td>
+                    <td>Missing outputs count as failure cases with capped error and zero tracking fraction</td>
+                  </tr>
+                  <tr>
+                    <td>iMED NVS</td>
+                    <td>PSNR and SSIM computed per frame, then averaged per sequence</td>
+                    <td>Mean PSNR over all hidden test sequences</td>
+                    <td>Missing outputs contribute zero-quality frames in the aggregate</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2>Statistical analysis</h2>
+            <p>
+              The working draft proposes hierarchical bootstrap confidence intervals with 1000 iterations, resampling test sequences and then frames within sequences. This is intended to reflect the nested structure of the evaluation data and to report both score and rank variability.
+            </p>
+
+            <div class="callout">
+              <strong>Practical note.</strong>
+              For methods that require scene-specific training at evaluation time, the proposal states that runtime limits will be enforced for practicality. Those exact caps should be written explicitly once the challenge infrastructure is finalized.
+            </div>
+
+            <h2>Validation and hidden test philosophy</h2>
+            <ul>
+              <li>Participants are expected to self-evaluate on public development data using official scripts.</li>
+              <li>Intermediate validation submissions are planned before the final test phase.</li>
+              <li>Final rankings are computed only on hidden test scenes that remain unseen to participants.</li>
+              <li>The split is designed to measure generalization to new anatomical scenes rather than new tool categories or radically different camera hardware.</li>
+            </ul>
+
+            <h2>Prizes and awards</h2>
+            <div class="panel-grid">
+              <article>
+                <h3>Current proposal</h3>
+                <p>
+                  For each task, the proposal states that there will be monetary prizes for first, second, and third place. Final amounts are still to be determined.
+                </p>
+              </article>
+              <article>
+                <h3>Organizer-affiliated teams</h3>
+                <p>
+                  Organizer-affiliated teams may appear on the leaderboard for transparency and scientific comparison, but are not eligible for monetary or sponsored awards.
+                </p>
+              </article>
+            </div>
+
+            <h2>Publication policy</h2>
+            <p>
+              The proposal indicates that participating teams with valid submissions will be eligible for inclusion in a joint challenge paper, with up to three named contributors per team depending on total participation. Teams are expected to submit a structured methods report and may later publish separate papers that cite the official challenge publication.
+            </p>
+
+            <h2>Suggested public wording to keep</h2>
+            <div class="faq-list">
+              <div class="faq-item">
+                <h3>Public leaderboard</h3>
+                <p>Display the official metrics and the best valid submission per team, with organizer-affiliated teams clearly labeled.</p>
+              </div>
+              <div class="faq-item">
+                <h3>Top methods announcement</h3>
+                <p>Publicly announce the top three external teams for each task during EndoVis / MICCAI and on the challenge website.</p>
+              </div>
+              <div class="faq-item">
+                <h3>Confidence reporting</h3>
+                <p>Publish confidence intervals or rank variability summaries when results are close, especially for the final report paper.</p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          Evaluation page based on the current proposal draft. Replace all remaining TBD prize and runtime details before public launch.
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation - iMED Challenge 2026</title>
+    <meta name="description" content="Participation guide for the iMED Challenge 2026.">
+    <link rel="stylesheet" href="assets/site.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="masthead">
+        <div class="masthead__inner">
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__brand" href="./index.html">iMED Challenge 2026</a>
+            <button class="site-nav__toggle" type="button" data-nav-toggle aria-label="Toggle navigation">Menu</button>
+            <ul class="site-nav__links" data-nav-links>
+              <li><a href="./index.html">Overview</a></li>
+              <li><a href="./data.html">Data</a></li>
+              <li><a href="./evaluation.html">Evaluation &amp; Prizes</a></li>
+              <li><a class="is-current" href="./participation.html">Participation</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="page-wrap">
+        <aside class="sidebar">
+          <div class="sidebar__sticky">
+            <section class="profile-card">
+              <div class="profile-card__avatar">
+                <img src="images/imed-mark.svg" alt="iMED Challenge logo">
+              </div>
+              <h2 class="profile-card__title">Participation</h2>
+              <p class="profile-card__subtitle">Docker submission, public data, fully automatic methods</p>
+              <a class="profile-card__button" href="mailto:sierra.bonilla.21@ucl.ac.uk">Contact Organizers</a>
+              <ul class="profile-card__meta">
+                <li><span class="profile-card__dot"></span><span><strong>Method type</strong><br>Fully automatic only</span></li>
+                <li><span class="profile-card__dot"></span><span><strong>External data</strong><br>Publicly available external data and pretrained models allowed</span></li>
+                <li><span class="profile-card__dot"></span><span><strong>Private data</strong><br>Private clinical or non-public institutional data not allowed</span></li>
+              </ul>
+            </section>
+          </div>
+        </aside>
+
+        <section class="content">
+          <article class="content-card">
+            <div class="eyebrow">How To Participate</div>
+            <h1>Rules, deadlines, and submission flow</h1>
+            <p class="kicker">
+              This page turns the proposal text into participant-facing instructions. Once the Synapse pages are live, the placeholder steps below can be replaced with direct registration and submission links.
+            </p>
+
+            <h2>Who can participate</h2>
+            <p>
+              The challenge is open to academic and industry teams working on surgical vision, robotics, 3D reconstruction, SLAM, neural rendering, and related fields. Organizer-affiliated teams may participate under the restrictions described below, but will not be eligible for prizes.
+            </p>
+
+            <h2>Participation rules</h2>
+            <ul>
+              <li>Only fully automatic methods are allowed.</li>
+              <li>Publicly available external datasets and pretrained models may be used, but they must be documented clearly in the method report.</li>
+              <li>Private clinical data and non-public institutional datasets are not allowed.</li>
+              <li>Organizer-affiliated teams may submit and appear on the leaderboard, but are not prize-eligible and must follow exactly the same deadlines and access rules as all other teams.</li>
+            </ul>
+
+            <h2>Expected submission format</h2>
+            <div class="panel-grid">
+              <article>
+                <h3>Task 1: Pose Estimation</h3>
+                <p>
+                  Submit a Docker image implementing a <code>get_pose()</code> interface compatible with the official evaluation pipeline.
+                </p>
+              </article>
+              <article>
+                <h3>Task 2: Deformable NVS</h3>
+                <p>
+                  Submit a Docker image implementing a <code>new_view()</code> interface compatible with the official rendering and evaluation pipeline.
+                </p>
+              </article>
+            </div>
+
+            <div class="callout">
+              <strong>Submission platform.</strong>
+              The working proposal specifies Synapse as the official challenge platform. The final public site should replace this callout with a direct registration link, a submission wiki, and a troubleshooting forum link.
+            </div>
+
+            <h2>Participant timeline</h2>
+            <ol class="timeline">
+              <li><strong>April 15, 2026</strong> Registration opens and challenge materials become available.</li>
+              <li><strong>May 30, 2026</strong> Technical compatibility testing opens for Docker submissions.</li>
+              <li><strong>May 30, 2026</strong> Public validation submissions open for qualitative and quantitative reporting on public sequences.</li>
+              <li><strong>August 20, 2026</strong> Final Docker submission deadline.</li>
+              <li><strong>September 1, 2026</strong> Method report deadline.</li>
+              <li><strong>Late September 2026</strong> Final hidden-test results communicated to participants.</li>
+            </ol>
+
+            <h2>Checklist before submission</h2>
+            <div class="faq-list">
+              <div class="faq-item">
+                <h3>1. Register your team</h3>
+                <p>Create a team entry on the official challenge platform once it is live and make sure your contact email is correct.</p>
+              </div>
+              <div class="faq-item">
+                <h3>2. Review the data usage agreement</h3>
+                <p>The proposal currently lists <strong>CC BY</strong> for the challenge dataset release. Confirm the final license on the official platform before publishing derivative assets.</p>
+              </div>
+              <div class="faq-item">
+                <h3>3. Validate your Docker image</h3>
+                <p>Test your container with the official loader and evaluation scripts on public data before submitting to the hidden test phase.</p>
+              </div>
+              <div class="faq-item">
+                <h3>4. Document external data use</h3>
+                <p>List all external datasets, pretrained checkpoints, and additional supervision sources in the method report.</p>
+              </div>
+              <div class="faq-item">
+                <h3>5. Submit your structured report</h3>
+                <p>The current proposal asks for a structured methods report and contributor names for possible inclusion in the joint challenge paper.</p>
+              </div>
+            </div>
+
+            <h2>FAQ</h2>
+            <div class="faq-list">
+              <div class="faq-item">
+                <h3>Can we use external public datasets?</h3>
+                <p>Yes. The current policy allows publicly available datasets and pretrained networks, provided they are clearly documented and legally accessible.</p>
+              </div>
+              <div class="faq-item">
+                <h3>Can we use private hospital data?</h3>
+                <p>No. The current proposal explicitly disallows private clinical data and non-public institutional datasets.</p>
+              </div>
+              <div class="faq-item">
+                <h3>Are organizer teams allowed on the leaderboard?</h3>
+                <p>Yes, but they must be clearly marked as organizer-affiliated and are not eligible for awards.</p>
+              </div>
+              <div class="faq-item">
+                <h3>Will there be a public validation phase?</h3>
+                <p>Yes. The proposal describes public validation support using official scripts, baseline code, and intermediate submissions before final hidden testing.</p>
+              </div>
+              <div class="faq-item">
+                <h3>Will code need to be open-sourced?</h3>
+                <p>Open-sourcing is encouraged but not required. Teams must submit executable Docker containers to the organizers.</p>
+              </div>
+            </div>
+
+            <h2>Contact</h2>
+            <p>
+              For current questions related to this website draft or the challenge planning materials, contact
+              <a href="mailto:sierra.bonilla.21@ucl.ac.uk">Sierra Bonilla</a>.
+              Once the official platform is live, it is a good idea to add a dedicated forum or issue tracker link here as well.
+            </p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          Participation guidance reflects the current proposal text. Add final Synapse links and the signed-registration workflow before launch.
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/site.js"></script>
+  </body>
+</html>

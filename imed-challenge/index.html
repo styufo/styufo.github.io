@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMED Challenge 2026</title>
+    <meta name="description" content="iMED Challenge 2026 at EndoVis / MICCAI: pose estimation and deformable novel view synthesis for surgical vision.">
+    <link rel="stylesheet" href="assets/site.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="masthead">
+        <div class="masthead__inner">
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__brand" href="./index.html">iMED Challenge 2026</a>
+            <button class="site-nav__toggle" type="button" data-nav-toggle aria-label="Toggle navigation">Menu</button>
+            <ul class="site-nav__links" data-nav-links>
+              <li><a class="is-current" href="./index.html">Overview</a></li>
+              <li><a href="./data.html">Data</a></li>
+              <li><a href="./evaluation.html">Evaluation &amp; Prizes</a></li>
+              <li><a href="./participation.html">Participation</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="page-wrap">
+        <aside class="sidebar">
+          <div class="sidebar__sticky">
+            <section class="profile-card">
+              <div class="profile-card__avatar">
+                <img src="images/imed-mark.svg" alt="iMED Challenge logo">
+              </div>
+              <h2 class="profile-card__title">iMED Challenge</h2>
+              <p class="profile-card__subtitle">MICCAI 2026 / EndoVis</p>
+              <a class="profile-card__button" href="./participation.html">How To Participate</a>
+              <ul class="profile-card__meta">
+                <li><span class="profile-card__dot"></span><span><strong>Primary contact</strong><br>Sierra Bonilla<br><a href="mailto:sierra.bonilla.21@ucl.ac.uk">sierra.bonilla.21@ucl.ac.uk</a></span></li>
+                <li><span class="profile-card__dot"></span><span><strong>Scope</strong><br>Pose estimation and deformable novel view synthesis for surgical endoscopy</span></li>
+                <li><span class="profile-card__dot"></span><span><strong>Platform</strong><br>Synapse for challenge submissions; public dataset hosting planned separately</span></li>
+                <li><span class="profile-card__dot"></span><span><strong>Status</strong><br>Website draft based on current proposal materials</span></li>
+              </ul>
+            </section>
+          </div>
+        </aside>
+
+        <section class="content">
+          <article class="content-card">
+            <div class="hero">
+              <div>
+                <div class="eyebrow">EndoVis 2026 Challenge Track</div>
+                <h1>Multi-Endoscope 3D Surgical Vision, built around real deformable scenes</h1>
+                <p class="lead">
+                  The iMED Challenge benchmarks two core problems in surgical vision: relative pose estimation between synchronized endoscopes and deformable novel view synthesis under realistic tissue motion, tool interaction, and constrained viewpoints.
+                </p>
+                <ul class="tagline-list">
+                  <li>Pose Estimation</li>
+                  <li>Deformable NVS</li>
+                  <li>Surgical Endoscopy</li>
+                  <li>Multi-view Reconstruction</li>
+                </ul>
+                <div class="hero__actions">
+                  <a class="button" href="./participation.html">Read Participation Guide</a>
+                  <a class="button button--ghost" href="./data.html">Explore Dataset Details</a>
+                </div>
+              </div>
+              <div class="hero__visual">
+                <img src="images/hero-figure.svg" alt="Illustration of dual-endoscope surgical vision setup">
+              </div>
+            </div>
+
+            <div class="stat-strip">
+              <div class="stat-strip__item">
+                <div class="stat-strip__value">340</div>
+                <div class="stat-strip__label">total iMED sequences in the underlying dataset</div>
+              </div>
+              <div class="stat-strip__item">
+                <div class="stat-strip__value">2</div>
+                <div class="stat-strip__label">challenge tasks in the current proposal</div>
+              </div>
+              <div class="stat-strip__item">
+                <div class="stat-strip__value">105 / 113</div>
+                <div class="stat-strip__label">task-specific subset sizes described in the proposal</div>
+              </div>
+              <div class="stat-strip__item">
+                <div class="stat-strip__value">4</div>
+                <div class="stat-strip__label">synchronized video streams per sequence from dual stereo endoscopes</div>
+              </div>
+            </div>
+
+            <h2 id="description">Description</h2>
+            <p>
+              Vision-based 3D reconstruction is a foundational capability for surgical guidance, scene understanding, and future autonomy in minimally invasive procedures. The iMED Challenge focuses on this problem under the difficult conditions that matter most in practice: deforming anatomy, specular surfaces, limited viewpoints, and tool-tissue interaction. The challenge is built on synchronized dual-endoscope data and is intended to evaluate how well methods generalize to unseen anatomical scenes instead of merely interpolating within an easy capture setup.
+            </p>
+
+            <h2 id="objective">Objective</h2>
+            <p>
+              Advance robust 3D surgical vision by benchmarking methods for accurate relative camera pose estimation and deformable novel view synthesis in endoscopic scenes.
+            </p>
+
+            <h2 id="motivation">Motivation</h2>
+            <p>
+              Traditional Structure-from-Motion pipelines struggle in surgical videos because tissue deforms, anatomical regions may be weakly textured, and specular highlights violate photometric assumptions. Data-driven approaches also remain difficult to train reliably because public datasets are limited and surgical imagery differs substantially from natural-image pretraining corpora. iMED is designed to provide a cleaner benchmark for these hard but clinically meaningful settings.
+            </p>
+
+            <div class="callout">
+              <strong>Working proposal summary.</strong>
+              The current challenge draft positions iMED as a repeated annual EndoVis challenge with two tracks: <em>iMED PE</em> for camera pose estimation and <em>iMED NVS</em> for deformable novel view synthesis. Dates and platform details below reflect the proposal materials shared by the organizing team and should be finalized before public launch.
+            </div>
+
+            <h2 id="tasks">Tasks</h2>
+            <div class="panel-grid">
+              <article>
+                <div class="task-header">
+                  <h3>Task 1: iMED PE</h3>
+                  <span class="chip">Primary ranking: ATE</span>
+                </div>
+                <p>
+                  Estimate the relative pose between two endoscopes in moving-camera surgical sequences. Methods must remain stable under tissue deformation, reflections, limited texture, and constrained views.
+                </p>
+                <div class="chip-row">
+                  <span class="chip chip--muted">78 train</span>
+                  <span class="chip chip--muted">21 val</span>
+                  <span class="chip chip--muted">6 hidden test</span>
+                </div>
+              </article>
+              <article>
+                <div class="task-header">
+                  <h3>Task 2: iMED NVS</h3>
+                  <span class="chip">Primary ranking: PSNR</span>
+                </div>
+                <p>
+                  Synthesize novel views in deforming surgical scenes using a train-on-one-endoscope, test-on-another setup. The benchmark is meant to reward actual geometric and temporal understanding rather than simple view interpolation.
+                </p>
+                <div class="chip-row">
+                  <span class="chip chip--muted">84 train</span>
+                  <span class="chip chip--muted">23 val</span>
+                  <span class="chip chip--muted">6 hidden test</span>
+                </div>
+              </article>
+            </div>
+
+            <h2 id="news">News</h2>
+            <ul>
+              <li><strong>March 20, 2026</strong> Initial public website draft prepared from the current iMED Challenge proposal.</li>
+              <li><strong>April 15, 2026</strong> Proposal-target date for participant registration opening and public release of challenge materials.</li>
+              <li><strong>May 30, 2026</strong> Proposal-target date for technical Docker compatibility checks and public validation submissions.</li>
+            </ul>
+
+            <h2 id="timeline">Timeline</h2>
+            <ol class="timeline">
+              <li><strong>April 15, 2026</strong> Registration opens, challenge website launch, dataset release, and evaluation tooling release.</li>
+              <li><strong>May 30, 2026</strong> Optional Docker compatibility testing opens; public validation submissions begin.</li>
+              <li><strong>August 20, 2026</strong> Final Docker submission deadline.</li>
+              <li><strong>September 1, 2026</strong> Structured method report deadline.</li>
+              <li><strong>Late September 2026</strong> Final evaluation results shared with participants.</li>
+              <li><strong>October 2026</strong> EndoVis / MICCAI challenge day, with exact date still to be announced.</li>
+            </ol>
+
+            <h2 id="organizers">Organizers</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Institution</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sierra Bonilla</td>
+                    <td>University College London</td>
+                  </tr>
+                  <tr>
+                    <td>John Han</td>
+                    <td>Vanderbilt University</td>
+                  </tr>
+                  <tr>
+                    <td>Tianyi Song</td>
+                    <td>University College London</td>
+                  </tr>
+                  <tr>
+                    <td>Adam Schmidt</td>
+                    <td>Intuitive Surgical, Inc.</td>
+                  </tr>
+                  <tr>
+                    <td>Omid Mohareri</td>
+                    <td>Intuitive Surgical, Inc.</td>
+                  </tr>
+                  <tr>
+                    <td>Francisco Vasconcelos</td>
+                    <td>University College London</td>
+                  </tr>
+                  <tr>
+                    <td>Sophia Bano</td>
+                    <td>University College London</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2 id="resources">Resources</h2>
+            <div class="resource-grid">
+              <article class="resource-card">
+                <h3>Working materials folder</h3>
+                <p>Shared challenge documents, proposal drafts, and planning files used to prepare the current website.</p>
+                <a href="https://drive.google.com/drive/folders/1LkqZZc_y9KybadAIDqEGHWH1kaLARn32">Open Google Drive folder</a>
+              </article>
+              <article class="resource-card">
+                <h3>Challenge proposal PDF</h3>
+                <p>The EndoVis challenge proposal document currently referenced for summary text and schedule drafting.</p>
+                <a href="https://drive.google.com/file/d/1X4N39U27dV0TmXfyZhYX-Thdo9KUt_rr/view?usp=drivesdk">Open proposal PDF</a>
+              </article>
+              <article class="resource-card">
+                <h3>Combined iMED proposal draft</h3>
+                <p>Detailed task design, dataset splits, assessment methods, and participation rules for both subtasks.</p>
+                <a href="https://docs.google.com/document/d/1aF_IBFMdRHbUFIhzSu1SJ7lHa7-8HDgy/edit?usp=drivesdk&amp;rtpof=true&amp;sd=true">Open combined draft</a>
+              </article>
+              <article class="resource-card">
+                <h3>Submission platform</h3>
+                <p>Synapse challenge pages are planned for official submission and leaderboard handling. Link to be added once live.</p>
+                <span class="chip chip--muted">URL TBA</span>
+              </article>
+            </div>
+
+            <h2 id="references">References</h2>
+            <ol>
+              <li>Sturm, J. et al. “A benchmark for the evaluation of RGB-D SLAM systems.” IROS, 2012.</li>
+              <li>Ozyoruk, K. B. et al. “EndoSLAM dataset...” Medical Image Analysis, 2021.</li>
+              <li>Rau, A. et al. “SimCol3D - 3D reconstruction during colonoscopy challenge.” Medical Image Analysis, 2024.</li>
+            </ol>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          iMED Challenge website draft. Built as a GitHub Pages-ready static site with a layout inspired by the STIR Challenge website structure.
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/site.js"></script>
+  </body>
+</html>

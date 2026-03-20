@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data - iMED Challenge 2026</title>
+    <meta name="description" content="Dataset and split details for the iMED Challenge 2026.">
+    <link rel="stylesheet" href="assets/site.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="masthead">
+        <div class="masthead__inner">
+          <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__brand" href="./index.html">iMED Challenge 2026</a>
+            <button class="site-nav__toggle" type="button" data-nav-toggle aria-label="Toggle navigation">Menu</button>
+            <ul class="site-nav__links" data-nav-links>
+              <li><a href="./index.html">Overview</a></li>
+              <li><a class="is-current" href="./data.html">Data</a></li>
+              <li><a href="./evaluation.html">Evaluation &amp; Prizes</a></li>
+              <li><a href="./participation.html">Participation</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main class="page-wrap">
+        <aside class="sidebar">
+          <div class="sidebar__sticky">
+            <section class="profile-card">
+              <div class="profile-card__avatar">
+                <img src="images/imed-mark.svg" alt="iMED Challenge logo">
+              </div>
+              <h2 class="profile-card__title">Dataset</h2>
+              <p class="profile-card__subtitle">Dual stereo endoscopy with deformable anatomy</p>
+              <a class="profile-card__button" href="https://drive.google.com/drive/folders/1LkqZZc_y9KybadAIDqEGHWH1kaLARn32">Working Materials</a>
+              <ul class="profile-card__meta">
+                <li><span class="profile-card__dot"></span><span><strong>Acquisition setup</strong><br>Two synchronized stereo endoscopes, four video streams per sequence</span></li>
+                <li><span class="profile-card__dot"></span><span><strong>Capture types</strong><br>Ex vivo, in vivo post-mortem, and in vivo live</span></li>
+                <li><span class="profile-card__dot"></span><span><strong>Challenge policy</strong><br>Scene-level split isolation to prevent leakage</span></li>
+              </ul>
+            </section>
+          </div>
+        </aside>
+
+        <section class="content">
+          <article class="content-card">
+            <div class="eyebrow">Data Overview</div>
+            <h1>Dataset design built for hard surgical vision cases</h1>
+            <p class="kicker">
+              The iMED Challenge uses task-specific subsets of the broader iMED dataset. The current proposal emphasizes difficult but realistic settings: deforming tissue, overlapping endoscope views, tool interaction, and clinically relevant variation across scenes.
+            </p>
+
+            <h2>What participants receive</h2>
+            <div class="panel-grid">
+              <article>
+                <h3>Image data</h3>
+                <p>
+                  Synchronized multi-view endoscopic video acquired from two stereo endoscopes, resulting in four temporally aligned streams per sequence.
+                </p>
+              </article>
+              <article>
+                <h3>Calibration and metadata</h3>
+                <p>
+                  Camera intrinsics, relative geometry, acquisition category, session / scene / sequence identifiers, tool metadata, and motion-type information.
+                </p>
+              </article>
+              <article>
+                <h3>Task-linked labels</h3>
+                <p>
+                  Relative camera pose trajectories for pose estimation cases, plus pseudo-labeled anatomy and tool segmentations where relevant to the dataset release.
+                </p>
+              </article>
+              <article>
+                <h3>Support code</h3>
+                <p>
+                  The proposal states that official loaders, evaluation scripts, Docker templates, and baseline implementations will be released alongside the challenge.
+                </p>
+              </article>
+            </div>
+
+            <h2>Acquisition setup</h2>
+            <p>
+              Data were collected with dual stereo endoscopy, using two synchronized stereo endoscopes with overlapping fields of view. Endoscope 1 is described in the proposal as a stationary viewpoint, while Endoscope 2 is robot-mounted and actively moved in the pose-estimation setting. Synchronization accuracy is reported at approximately 3 ms.
+            </p>
+
+            <div class="note">
+              The current draft cites data collection with a da Vinci 5 robot and da Vinci 5 stereo endoscopes at Intuitive Surgical facilities, spanning ex vivo organ scenes, cadaver acquisitions, and one live porcine model.
+            </div>
+
+            <h2>Task-specific splits</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Task</th>
+                    <th>Train</th>
+                    <th>Validation</th>
+                    <th>Hidden Test</th>
+                    <th>Main purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>iMED PE</td>
+                    <td>78 cases</td>
+                    <td>21 cases</td>
+                    <td>6 cases</td>
+                    <td>Relative pose estimation under moving-camera, deformable scenes</td>
+                  </tr>
+                  <tr>
+                    <td>iMED NVS</td>
+                    <td>84 cases</td>
+                    <td>23 cases</td>
+                    <td>6 cases</td>
+                    <td>Novel view synthesis with static cameras and moving anatomy</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="split-grid">
+              <div class="split-card">
+                <strong>Scene-level isolation</strong>
+                All sequences from a given anatomical scene remain within a single split.
+              </div>
+              <div class="split-card">
+                <strong>In-distribution tools</strong>
+                Hidden test scenes contain tool types seen during training, reducing confounds from unseen instruments.
+              </div>
+              <div class="split-card">
+                <strong>Unseen anatomy</strong>
+                The intended challenge is generalization to new anatomical scenes rather than new hardware conditions.
+              </div>
+            </div>
+
+            <h2>Subtask definitions</h2>
+            <div class="panel-grid">
+              <article>
+                <h3>Pose Estimation case definition</h3>
+                <p>
+                  One synchronized stereo video pair, around 10 to 15 seconds long, where one endoscope remains stationary while the other moves. Ground-truth relative poses are estimated using ArUco-assisted reconstruction and are provided for all frames.
+                </p>
+              </article>
+              <article>
+                <h3>Deformable NVS case definition</h3>
+                <p>
+                  One stereo clip from Endoscope 2, together with the relative pose of Endoscope 1, while neither camera moves and the anatomical scene deforms. The held-out view is used to evaluate novel-view rendering quality.
+                </p>
+              </article>
+            </div>
+
+            <h2>Modalities and context</h2>
+            <ul>
+              <li>Visible-light RGB endoscopic imaging from dual stereo systems.</li>
+              <li>Acquisition categories include ex vivo, in vivo post-mortem, and in vivo live data.</li>
+              <li>Metadata include acquisition category, motion source, anatomical region description, tool presence, and energy-device indicators.</li>
+              <li>The dataset is anonymized and does not include individual-level patient metadata such as age, gender, or clinical history.</li>
+            </ul>
+
+            <h2>Annotations and pre-processing</h2>
+            <p>
+              The proposal describes ArUco-supported calibration and reconstruction pipelines for pose generation, plus fallback procedures using OpenCV ArUco detection, PnP, RANSAC, and temporal filtering when reconstructions do not meet quality thresholds. Marker regions are inpainted for training and evaluation.
+            </p>
+
+            <div class="metric-grid">
+              <article class="metric-card">
+                <h3>Pose reference generation</h3>
+                <p>
+                  COLMAP-based reconstruction with explicit quality control, supported by dense fiducial correspondences in low-texture scenes.
+                </p>
+              </article>
+              <article class="metric-card">
+                <h3>NVS support labels</h3>
+                <p>
+                  Relative camera pose, calibration files, and pseudo-labels for anatomy and tools where included in the dataset release.
+                </p>
+              </article>
+            </div>
+
+            <h2>Known sources of error</h2>
+            <ul>
+              <li>Residual calibration drift in live sequences.</li>
+              <li>Potential inaccuracies in pseudo-labeled tool masks.</li>
+              <li>Visual artifacts introduced when ArUco markers are digitally removed.</li>
+              <li>Reconstruction degradation due to deformation and specular highlights.</li>
+            </ul>
+
+            <h2>Release plan</h2>
+            <p>
+              Based on the current proposal, public release of challenge materials is targeted for <strong>April 15, 2026</strong>. Official loaders, evaluation scripts, and baseline code are expected to accompany that release. The final public-facing site should replace this sentence with confirmed URLs once dataset hosting and GitHub repositories are live.
+            </p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__inner">
+          Data page drafted from the current iMED challenge proposal and intended for later replacement with finalized dataset links.
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/site.js"></script>
+  </body>
+</html>
