@@ -629,6 +629,31 @@ tr:last-child td {
   margin-top: 0;
 }
 
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.sponsor-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.sponsor-card img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+}
+
 .tagline-list {
   list-style: none;
   padding: 0;
@@ -691,7 +716,8 @@ tr:last-child td {
   .panel-grid,
   .resource-grid,
   .metric-grid,
-  .split-grid {
+  .split-grid,
+  .sponsor-grid {
     grid-template-columns: 1fr;
   }
 }
