@@ -428,6 +428,11 @@ papertitle {
   line-height: 1.45;
 }
 
+.publication-row.no-media .paper-info-cell {
+  width: 100%;
+  padding: 22px 24px;
+}
+
 .experience-list {
   margin-top: 16px;
 }
@@ -446,29 +451,24 @@ papertitle {
   border-top: 1px solid #e5e5e5;
 }
 
-.experience-mark {
-  width: 76px;
-  height: 48px;
+.experience-logo-wrap {
+  width: 82px;
+  height: 64px;
   display: grid;
   place-items: center;
-  border: 2px solid #111111;
-  background: #111111;
-  color: #ffffff;
-  font-size: 17px;
-  font-weight: 700;
+  padding: 4px;
 }
 
-.experience-mark-seu {
-  border-color: #7d2027;
-  background: #ffffff;
-  color: #7d2027;
+.experience-logo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
-.experience-mark-njupt {
-  border-color: #1f5a8a;
-  background: #ffffff;
-  color: #1f5a8a;
-  font-size: 13px;
+.experience-logo-wide {
+  width: 100%;
+  height: auto;
 }
 
 .experience-item strong {
@@ -478,6 +478,36 @@ papertitle {
 .experience-item p {
   margin: 2px 0 0;
   color: var(--muted);
+}
+
+.services-list {
+  margin-top: 16px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.service-item {
+  padding: 17px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.service-item h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.service-item p {
+  margin: 3px 0;
+  color: var(--muted);
+}
+
+.service-item p strong {
+  color: var(--ink);
+  font-size: inherit;
+}
+
+.service-links {
+  margin-top: 7px !important;
 }
 
 .site-footer {
@@ -706,14 +736,14 @@ papertitle {
     padding: 14px 4px;
   }
 
-  .experience-mark {
-    width: 66px;
-    height: 44px;
-    font-size: 15px;
+  .experience-logo-wrap {
+    width: 68px;
+    height: 56px;
+    padding: 3px;
   }
 
-  .experience-mark-njupt {
-    font-size: 11px;
+  .service-item {
+    padding: 15px 4px;
   }
 
   #back-to-top {

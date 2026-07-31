@@ -47,6 +47,7 @@ permalink: /
     <a href="#news"><span>News</span></a>
     <a href="#publications"><span>Publications</span></a>
     <a href="#experience"><span>Experience</span></a>
+    <a href="#services"><span>Services</span></a>
   </nav>
 
   <main class="homepage">
@@ -79,7 +80,7 @@ permalink: /
               </p>
             </td>
             <td class="profile-photo-cell">
-              <img class="profile-photo" src="/images/11.png" alt="Portrait of Tianyi Song" width="1050" height="1050">
+              <img class="profile-photo" src="/images/home/profile-lifestyle.jpg" alt="Tianyi Song at Reynisfjara beach in Iceland" width="550" height="550">
             </td>
           </tr>
         </tbody>
@@ -91,14 +92,18 @@ permalink: /
       <ul class="news-list">
         <li class="news-entry">
           <span class="news-date-badge">Jul. 2026</span>
-          <span><a href="https://track2map.github.io/">Track2Map</a> was accepted at <span class="news-highlight">MICCAI 2026</span>.</span>
+          <span><a href="https://ieeexplore.ieee.org/document/11626937">Shadeoff</a> was published in <span class="news-highlight">IEEE Transactions on Consumer Electronics</span> as Early Access.</span>
         </li>
         <li class="news-entry">
           <span class="news-date-badge">Jul. 2026</span>
           <span><a href="https://diff2dgs.github.io/">Diff2DGS</a> was accepted by <span class="news-highlight">IEEE Robotics and Automation Letters</span>.</span>
         </li>
         <li class="news-entry">
-          <span class="news-date-badge">2024</span>
+          <span class="news-date-badge">Jun. 2026</span>
+          <span><a href="https://track2map.github.io/">Track2Map</a> was accepted at <span class="news-highlight">MICCAI 2026</span>.</span>
+        </li>
+        <li class="news-entry">
+          <span class="news-date-badge">Oct. 2024</span>
           <span>I joined the UCL Hawkes Institute as a PhD researcher in Robotics and Computation.</span>
         </li>
       </ul>
@@ -107,7 +112,7 @@ permalink: /
     <section id="publications" class="page-section content-section" aria-labelledby="publications-heading">
       <heading id="publications-heading">Publications</heading>
       <p class="publication-note">
-        Recent work is <span class="highlight">highlighted</span>.
+        † Equal contribution. Recent work is <span class="highlight">highlighted</span>.
         See my <a href="https://scholar.google.com/citations?user=rEeoJtQAAAAJ&amp;hl=en">Google Scholar profile</a> for the latest citation record.
       </p>
 
@@ -116,33 +121,30 @@ permalink: /
         <button class="tag-btn" type="button" data-tag="surgical" aria-pressed="false">Surgical Vision</button>
         <button class="tag-btn" type="button" data-tag="reconstruction" aria-pressed="false">3D Reconstruction</button>
         <button class="tag-btn" type="button" data-tag="generative" aria-pressed="false">Generative AI</button>
+        <button class="tag-btn" type="button" data-tag="restoration" aria-pressed="false">Image Restoration</button>
       </div>
 
       <table class="publications-table" role="presentation">
         <tbody>
-          <tr class="publication-row featured" data-tags="surgical,reconstruction">
+          <tr class="publication-row featured" data-tags="generative,restoration">
             <td class="paper-image-cell">
-              <a class="paper-image-link" href="https://track2map.github.io/" aria-label="Track2Map project page">
-                <img class="paper-image paper-image-cover" src="/images/home/track2map.jpg" alt="Track2Map deformable surgical reconstructions over time" width="2463" height="802" loading="lazy">
+              <a class="paper-image-link" href="https://ieeexplore.ieee.org/document/11626937" aria-label="Shadeoff paper on IEEE Xplore">
+                <img class="paper-image paper-image-contain" src="/images/home/shadeoff-framework.jpg" alt="Shadeoff framework integrating SAM and diffusion for shadow removal" width="1200" height="793" loading="lazy">
               </a>
             </td>
             <td class="paper-info-cell">
-              <a href="https://arxiv.org/abs/2607.08408"><papertitle>Track2Map: Online Deformable SLAM with Motion-Aware Pose Optimization in Robotic Surgery</papertitle></a>
-              <p class="authors"><strong>Tianyi Song</strong>, Sierra Bonilla, Xinwei Ju, Evangelos Mazomenos, Danail Stoyanov, Adam Schmidt, Omid Mohareri, Sophia Bano, Francisco Vasconcelos</p>
-              <div class="paper-links">
-                <a href="https://track2map.github.io/">Project</a> /
-                <a href="https://github.com/styufo/Track2Map">Code</a> /
-                <a href="https://arxiv.org/abs/2607.08408">Paper</a>
-              </div>
-              <p class="venue"><em><strong>MICCAI 2026</strong></em></p>
-              <p class="paper-summary">An online deformable SLAM system that jointly optimizes camera trajectory and 3D Gaussians when pose priors are missing or noisy.</p>
+              <a href="https://ieeexplore.ieee.org/document/11626937"><papertitle>Shadeoff: A SAM-Integrated Diffusion Framework for High-Fidelity Shadow Removal</papertitle></a>
+              <p class="authors">Xiaofeng Zhang†, <strong>Tianyi Song†</strong>, Aoduo Li, Yihang Dong, Zexiao Liang</p>
+              <div class="paper-links"><a href="https://ieeexplore.ieee.org/document/11626937">Paper</a></div>
+              <p class="venue"><em><strong>IEEE Transactions on Consumer Electronics（IEEE TCE）, 2026（中科院一区）</strong></em></p>
+              <p class="paper-summary">A SAM-integrated diffusion framework designed for high-fidelity shadow removal under complex backgrounds and ambiguous shadow boundaries.</p>
             </td>
           </tr>
 
           <tr class="publication-row featured" data-tags="surgical,reconstruction,generative">
             <td class="paper-image-cell">
               <a class="paper-image-link" href="https://diff2dgs.github.io/" aria-label="Diff2DGS project page">
-                <img class="paper-image paper-image-cover" src="/images/home/diff2dgs.webp" alt="Diff2DGS reconstruction comparison for occluded surgical scenes" width="1920" height="1080" loading="lazy">
+                <img class="paper-image paper-image-contain" src="/images/home/diff2dgs-framework.jpg" alt="Diff2DGS framework for occluded surgical scene reconstruction" width="1400" height="981" loading="lazy">
               </a>
             </td>
             <td class="paper-info-cell">
@@ -153,43 +155,53 @@ permalink: /
                 <a href="https://github.com/styufo/Diff2DGS">Code</a> /
                 <a href="https://arxiv.org/abs/2602.18314">Paper</a>
               </div>
-              <p class="venue"><em><strong>IEEE Robotics and Automation Letters, 2026</strong></em></p>
+              <p class="venue"><em><strong>IEEE Robotics and Automation Letters（RA-L）, 2026（中科院二区，TOP）</strong></em></p>
               <p class="paper-summary">A two-stage framework combining temporally consistent video inpainting and deformable 2D Gaussian Splatting for reliable reconstruction behind surgical instruments.</p>
             </td>
           </tr>
 
-          <tr class="publication-row" data-tags="generative">
+          <tr class="publication-row featured" data-tags="surgical,reconstruction">
             <td class="paper-image-cell">
-              <a class="paper-image-link" href="https://arxiv.org/abs/2309.09553" aria-label="Causal-Story paper">
-                <img class="paper-image paper-image-contain" src="/images/home/causal-story.jpg" alt="Causal-Story local causal attention architecture" width="1343" height="499" loading="lazy">
+              <a class="paper-image-link" href="https://track2map.github.io/" aria-label="Track2Map project page">
+                <img class="paper-image paper-image-contain" src="/images/home/track2map-framework.png" alt="Overall Track2Map framework" width="1800" height="611" loading="lazy">
               </a>
             </td>
             <td class="paper-info-cell">
-              <a href="https://arxiv.org/abs/2309.09553"><papertitle>Causal-Story: Local Causal Attention Utilizing Parameter-Efficient Tuning for Visual Story Synthesis</papertitle></a>
-              <p class="authors"><strong>Tianyi Song</strong>, Jiuxin Cao, Kun Wang, Bo Liu, Xiaofeng Zhang</p>
+              <a href="https://arxiv.org/abs/2607.08408"><papertitle>Track2Map: Online Deformable SLAM with Motion-Aware Pose Optimization in Robotic Surgery</papertitle></a>
+              <p class="authors"><strong>Tianyi Song</strong>, Sierra Bonilla, Xinwei Ju, Evangelos Mazomenos, Danail Stoyanov, Adam Schmidt, Omid Mohareri, Sophia Bano, Francisco Vasconcelos</p>
               <div class="paper-links">
-                <a href="https://github.com/styufo/Causal-Story">Code</a> /
-                <a href="https://arxiv.org/abs/2309.09553">Paper</a>
+                <a href="https://track2map.github.io/">Project</a> /
+                <a href="https://github.com/styufo/Track2Map">Code</a> /
+                <a href="https://arxiv.org/abs/2607.08408">Paper</a>
               </div>
-              <p class="venue"><em><strong>ICASSP 2024</strong></em></p>
-              <p class="paper-summary">Local causal attention weighs historical captions and frames to improve consistency across generated visual stories.</p>
+              <p class="venue"><em><strong>MICCAI 2026（CCF-B）</strong></em></p>
+              <p class="paper-summary">An online deformable SLAM system that jointly optimizes camera trajectory and 3D Gaussians when pose priors are missing or noisy.</p>
             </td>
           </tr>
 
           <tr class="publication-row" data-tags="generative">
             <td class="paper-image-cell">
-              <a class="paper-image-link paper-placeholder" href="https://arxiv.org/abs/2309.11715" aria-label="Deshadow-Anything paper">
-                <span class="placeholder-before">Shadow</span>
-                <span class="placeholder-arrow" aria-hidden="true">→</span>
-                <span class="placeholder-after">Clean</span>
-                <small>SAM × Diffusion</small>
+              <a class="paper-image-link" href="https://ieeexplore.ieee.org/document/10446420" aria-label="Causal-Story paper on IEEE Xplore">
+                <img class="paper-image paper-image-contain" src="/images/home/causal-story-poster.jpg" alt="Causal-Story ICASSP poster" width="1200" height="849" loading="lazy">
               </a>
             </td>
             <td class="paper-info-cell">
-              <a href="https://arxiv.org/abs/2309.11715"><papertitle>Deshadow-Anything: When Segment Anything Model Meets Zero-Shot Shadow Removal</papertitle></a>
+              <a href="https://ieeexplore.ieee.org/document/10446420"><papertitle>Causal-Story: Local Causal Attention Utilizing Parameter-Efficient Tuning for Visual Story Synthesis</papertitle></a>
+              <p class="authors"><strong>Tianyi Song</strong>, Jiuxin Cao, Kun Wang, Bo Liu, Xiaofeng Zhang</p>
+              <div class="paper-links">
+                <a href="https://github.com/styufo/Causal-Story">Code</a> /
+                <a href="https://ieeexplore.ieee.org/document/10446420">Paper</a> /
+                <a href="https://arxiv.org/abs/2309.09553">arXiv</a>
+              </div>
+              <p class="venue"><em><strong>ICASSP 2024（CCF-B）</strong></em></p>
+              <p class="paper-summary">Local causal attention weighs historical captions and frames to improve consistency across generated visual stories.</p>
+            </td>
+          </tr>
+
+          <tr class="publication-row no-media" data-tags="generative,restoration">
+            <td class="paper-info-cell" colspan="2">
+              <papertitle>Deshadow-Anything: When Segment Anything Model Meets Zero-Shot Shadow Removal</papertitle>
               <p class="authors">Xiaofeng Zhang, <strong>Tianyi Song</strong>, Jiawei Yao</p>
-              <div class="paper-links"><a href="https://arxiv.org/abs/2309.11715">Paper</a></div>
-              <p class="venue"><em><strong>arXiv 2023</strong></em></p>
               <p class="paper-summary">Adapts Segment Anything and diffusion models for generalizable zero-shot shadow removal.</p>
             </td>
           </tr>
@@ -201,26 +213,54 @@ permalink: /
       <heading id="experience-heading">Experience</heading>
       <div class="experience-list">
         <article class="experience-item">
-          <div class="experience-mark">UCL</div>
+          <div class="experience-logo-wrap">
+            <img class="experience-logo experience-logo-wide" src="/images/home/institutions/ucl-hawkes.png" alt="UCL Hawkes Institute logo" width="4557" height="1992" loading="lazy">
+          </div>
           <div>
             <strong>University College London</strong>
-            <p>2024 – Present · PhD Researcher in Robotics and Computation</p>
+            <p>Oct. 2024 – Present · PhD Researcher in Robotics and Computation</p>
             <p>UCL Hawkes Institute · Advisor: <a href="https://www.ucl.ac.uk/surgical-robot-vision/francisco-vasconcelos">Francisco Vasconcelos</a></p>
           </div>
         </article>
         <article class="experience-item">
-          <div class="experience-mark experience-mark-seu">SEU</div>
+          <div class="experience-logo-wrap">
+            <img class="experience-logo" src="/images/home/institutions/seu.svg" alt="Southeast University logo" loading="lazy">
+          </div>
           <div>
             <strong>Southeast University</strong>
-            <p>M.Sc., completed 2024 · Multimodal image generation</p>
+            <p>2021 – 2024 · M.Eng. in Electronic Information</p>
+            <p>Research in multimodal image generation</p>
           </div>
         </article>
         <article class="experience-item">
-          <div class="experience-mark experience-mark-njupt">NJUPT</div>
+          <div class="experience-logo-wrap">
+            <img class="experience-logo" src="/images/home/institutions/njupt.jpg" alt="Nanjing University of Posts and Telecommunications logo" width="307" height="320" loading="lazy">
+          </div>
           <div>
             <strong>Nanjing University of Posts and Telecommunications</strong>
-            <p>B.Sc. in Communication Engineering</p>
+            <p>2017 – 2021 · B.Eng. in Communication Engineering</p>
           </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="page-section content-section" aria-labelledby="services-heading">
+      <heading id="services-heading">Services</heading>
+      <div class="services-list">
+        <article class="service-item">
+          <h3>Invited Reviewer</h3>
+          <p><strong>Journals:</strong> IEEE Transactions on Robotics (T-RO), IEEE Robotics and Automation Letters (RA-L), IEEE Transactions on Consumer Electronics (IEEE TCE)</p>
+          <p><strong>Conferences:</strong> ECCV, MICCAI, ICASSP</p>
+        </article>
+        <article class="service-item">
+          <h3>Challenge Organization</h3>
+          <p><strong>Organizer, iMED Challenge at MICCAI 2026</strong></p>
+          <p>Medical image computing challenge organization and community engagement.</p>
+          <p class="service-links">
+            <a href="https://imed-challenge.github.io/">Challenge website</a> /
+            <a href="https://www.synapse.org/Synapse:syn74277461/wiki/640043">Synapse</a> /
+            <a href="https://opencas.dkfz.de/endovis/challenges/2026/">EndoVis 2026</a>
+          </p>
         </article>
       </div>
     </section>
