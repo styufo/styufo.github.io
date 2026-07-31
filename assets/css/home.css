@@ -296,24 +296,29 @@ heading {
 }
 
 .paper-image-cell {
-  width: 30%;
-  padding: 18px;
+  width: 38%;
+  padding: 12px;
   vertical-align: middle;
 }
 
 .paper-info-cell {
-  width: 70%;
-  padding: 18px 18px 18px 5px;
+  width: 62%;
+  padding: 18px 18px 18px 8px;
   vertical-align: middle;
 }
 
 .paper-image-link {
-  width: 176px;
-  height: 148px;
+  width: 235px;
+  max-width: 100%;
+  height: 165px;
   display: block;
   overflow: hidden;
   border-radius: 5px;
   background: #f5f5f5;
+}
+
+.publication-row.media-emphasis .paper-image-link {
+  width: 260px;
 }
 
 .paper-image {
@@ -327,7 +332,7 @@ heading {
 }
 
 .paper-image-contain {
-  padding: 7px;
+  padding: 3px;
   background: #ffffff;
   object-fit: contain;
 }
@@ -462,9 +467,10 @@ papertitle {
 }
 
 .experience-logo-njupt {
-  width: 84%;
-  height: 84%;
+  width: 60%;
+  height: 60%;
   margin: auto;
+  transform: translateY(-3px);
 }
 
 .experience-item strong {
@@ -719,7 +725,12 @@ papertitle {
 
   .paper-image-link {
     width: 100%;
+    max-width: none;
     height: 176px;
+  }
+
+  .publication-row.media-emphasis .paper-image-link {
+    width: 100%;
   }
 
   .paper-image-cover {
