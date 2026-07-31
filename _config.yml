@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Personal Page"
+title                    : "Tianyi Song"
 title_separator          : "-"
 name                     : &name "Tianyi Song"
-description              : &description "Prof. Luigi Vanfretti's research group and lab. working on cyber-physical power system modeling and simulation, stability and control, and synchrophasor technology."
+description              : &description "Tianyi Song is a PhD researcher at UCL working on surgical robot vision, deformable SLAM, and reliable 3D reconstruction."
 url                      : https://styufo.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "styufo/styufo.github.io"
