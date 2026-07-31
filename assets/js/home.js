@@ -1,73 +1,58 @@
 (function () {
   "use strict";
 
-  if (window.lucide) {
-    window.lucide.createIcons({ "stroke-width": 1.8 });
-  }
+  var filter = document.getElementById("tag-filter");
+  var buttons = document.querySelectorAll(".tag-btn");
+  var rows = document.querySelectorAll(".publication-row[data-tags]");
 
-  var menuButton = document.querySelector(".menu-button");
-  var siteNav = document.getElementById("site-nav");
+  buttons.forEach(function (button) {
+    var tag = button.dataset.tag;
+    var count = tag === "all" ? rows.length : Array.from(rows).filter(function (row) {
+      return row.dataset.tags.split(",").includes(tag);
+    }).length;
+    var badge = document.createElement("span");
+    badge.className = "tag-count";
+    badge.textContent = count;
+    button.appendChild(badge);
+  });
 
-  if (menuButton && siteNav) {
-    menuButton.addEventListener("click", function () {
-      var isOpen = siteNav.classList.toggle("open");
-      menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuButton.setAttribute("title", isOpen ? "Close navigation" : "Open navigation");
-      document.body.classList.toggle("menu-open", isOpen);
-    });
+  if (filter) {
+    filter.addEventListener("click", function (event) {
+      var button = event.target.closest(".tag-btn");
+      if (!button) return;
 
-    siteNav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        siteNav.classList.remove("open");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("title", "Open navigation");
-        document.body.classList.remove("menu-open");
-      });
-    });
-  }
-
-  var filterButtons = document.querySelectorAll("[data-filter]");
-  var publications = document.querySelectorAll(".publication[data-topics]");
-
-  filterButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      var filter = button.dataset.filter;
-
-      filterButtons.forEach(function (item) {
+      buttons.forEach(function (item) {
         var selected = item === button;
         item.classList.toggle("active", selected);
         item.setAttribute("aria-pressed", String(selected));
       });
 
-      publications.forEach(function (publication) {
-        var topics = publication.dataset.topics.split(" ");
-        publication.hidden = filter !== "all" && !topics.includes(filter);
+      var selectedTag = button.dataset.tag;
+      rows.forEach(function (row) {
+        var tags = row.dataset.tags.split(",");
+        row.hidden = selectedTag !== "all" && !tags.includes(selectedTag);
       });
     });
-  });
+  }
 
-  var copyButton = document.getElementById("copy-email");
+  var copyButton = document.getElementById("email-copy");
   var toast = document.getElementById("toast");
   var toastTimer;
 
-  function showToast(message) {
+  function showToast() {
     if (!toast) return;
-    toast.textContent = message;
-    toast.classList.add("visible");
+    toast.classList.add("show");
     window.clearTimeout(toastTimer);
     toastTimer = window.setTimeout(function () {
-      toast.classList.remove("visible");
-    }, 1800);
+      toast.classList.remove("show");
+    }, 1700);
   }
 
   if (copyButton) {
     copyButton.addEventListener("click", function () {
       var email = copyButton.dataset.email;
-
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(email).then(function () {
-          showToast("Email copied");
-        }).catch(function () {
+        navigator.clipboard.writeText(email).then(showToast).catch(function () {
           window.location.href = "mailto:" + email;
         });
       } else {
@@ -76,6 +61,17 @@
     });
   }
 
-  var year = document.getElementById("current-year");
-  if (year) year.textContent = String(new Date().getFullYear());
+  var backToTop = document.getElementById("back-to-top");
+  if (backToTop) {
+    window.addEventListener("scroll", function () {
+      backToTop.classList.toggle("visible", window.scrollY > 520);
+    }, { passive: true });
+
+    backToTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  var currentYear = document.getElementById("current-year");
+  if (currentYear) currentYear.textContent = String(new Date().getFullYear());
 })();
