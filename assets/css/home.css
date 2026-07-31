@@ -2,7 +2,6 @@
   --accent: #f49300;
   --accent-dark: #6e3519;
   --accent-soft: #fff8e8;
-  --highlight: #fffed8;
   --ink: #222222;
   --muted: #555555;
   --line: rgba(17, 17, 17, 0.16);
@@ -217,11 +216,6 @@ heading {
   margin: 15px 0 0;
 }
 
-.highlight {
-  padding: 1px 3px;
-  background: var(--highlight);
-}
-
 .tag-filter {
   display: flex;
   flex-wrap: wrap;
@@ -295,10 +289,6 @@ heading {
 .publication-row > td:last-child {
   border-right: 1px solid var(--line);
   border-radius: 0 8px 8px 0;
-}
-
-.publication-row.featured > td {
-  background: var(--highlight);
 }
 
 .publication-row[hidden] {
@@ -469,6 +459,12 @@ papertitle {
 .experience-logo-wide {
   width: 100%;
   height: auto;
+}
+
+.experience-logo-njupt {
+  width: 84%;
+  height: 84%;
+  margin: auto;
 }
 
 .experience-item strong {
